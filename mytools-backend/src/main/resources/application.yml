@@ -1,0 +1,7 @@
+base:
+  version: v1.0.0
+
+spring:
+  profiles:
+    active: dev
+

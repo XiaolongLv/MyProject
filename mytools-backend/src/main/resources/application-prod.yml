@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  address: localhost
+
+spring:
+  application:
+    name: tools-base
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://127.0.0.1:3306/db_tools?useUnicode=true&character_set_server=utf8mb4  #5.7版本用这个
+    url: jdbc:mysql://127.0.0.1:3306/db_tools?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+  mail:
+    protocol: smtp
+    host: smtp.qq.com #根据你的邮箱smtp地址填写
+    from: #你的邮箱地址
+    username: #你的邮箱地址
+    password: #你的授权码
+    port: 465 #默认端口号
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+
+# redis若无单独服务器，可不用配置
+#  data:
+#    redis:
+#      database: 0
+#      host: localhost
+#      port: 6379
